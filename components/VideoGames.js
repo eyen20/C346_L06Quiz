@@ -1,17 +1,15 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
 import {FontAwesome6} from '@expo/vector-icons';
+import {Picker} from "@react-native-picker/picker";
 
 // Ex1: User-defined component Boat with properties
-const Boat = ({name, description, icon_name, icon_color, poster}) => {
+const VideoGames = ({question, icon_name, icon_color, poster}) => {
     return (
         <View>
-            <Text style={{ fontSize: 25, fontWeight: 'bold', color: 'black' }}>
+            <Text style={{ fontSize: 10, fontWeight: 'bold', color: 'black' }}>
                 <FontAwesome6 name={icon_name} size={25} color={icon_color}/>
-                {name}
-            </Text>
-            <Text style={{ fontSize: 15}}>
-                {description}
+                {question}
             </Text>
             <Image source={poster} style={{width:400, height:400}} />
             <Text></Text>
@@ -19,4 +17,4 @@ const Boat = ({name, description, icon_name, icon_color, poster}) => {
     );
 };
 
-export default Boat;
+export default VideoGames;
